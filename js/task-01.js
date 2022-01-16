@@ -1,11 +1,10 @@
-const unorderedListEl = document.querySelectorAll("ul#categories li.item");
-const unorderedListElLeng = unorderedListEl.length;
-console.log(`Number of categories : ${unorderedListElLeng} `);
+const allCategoriesRef = document.querySelectorAll(`ul#categories li.item`);
+const numberOfCategories = allCategoriesRef.length;
+console.log(`Number of categories: ${numberOfCategories}`);
 
-for (let i = 0; i < unorderedListElLeng; i++) {
-  const headerTextEl = unorderedListElLeng[i].firstElementChild.textContent;
-  console.log(`Category: ${headerTextEl}`);
-}
-const elementsEl = unorderedListElLeng[i].lastElementChild;
-const numberOfElementsEl = elementsEl.querySelectorAll("li");
-console.log(`Elements: ${numberOfElementsEl.length}`);
+allCategoriesRef.forEach((element) => {
+  const titleText = element.querySelector(`h2`).textContent;
+  console.log(`Category: ${titleText}`);
+  const elementsRef = element.querySelectorAll(`li`);
+  console.log(`Elements: ${elementsRef.length}`);
+});
