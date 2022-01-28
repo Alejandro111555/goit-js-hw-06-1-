@@ -13,6 +13,7 @@ const descrRef = document.querySelector(".color");
 buttonRef.addEventListener("click", setRandomHexColor);
 
 function setRandomHexColor() {
-  bodyRef.style.backgroundColor = getRandomHexColor();
-  descrRef.textContent = `${bodyRef.style.backgroundColor}`;
+  const color = getRandomHexColor();
+  bodyRef.style.backgroundColor = color;
+  descrRef.textContent = color;
 }
