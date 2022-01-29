@@ -6,8 +6,8 @@ const numberOfCategories = allCategoriesRef.length;
 console.log(`Number of categories: ${numberOfCategories}`);
 
 allCategoriesRef.forEach((element) => {
-  const titleText = element.querySelector(`h2`).textContent;
+  const titleText = element.firstElementChild.textContent;
   console.log(`Category: ${titleText}`);
-  const elementsRef = element.querySelectorAll(`li`);
-  console.log(`Elements: ${elementsRef.length}`);
+  const elementsRef = element.lastElementChild.children.length;
+  console.log(`Elements: ${elementsRef}`);
 });
