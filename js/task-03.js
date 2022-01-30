@@ -21,7 +21,7 @@ const galleryArr = images
   .join(" ");
 //const galleryUpd = galleryArr[0] + galleryArr[1] + galleryArr[2];
 //console.log(galleryArr)
-containerRef.insertAdjacentHTML("beforeEnd", galleryUpd);
+containerRef.insertAdjacentHTML("beforeEnd", galleryArr);
 console.log(containerRef);
 containerRef.style.display = "flex";
 containerRef.style.listStyleType = "none";
